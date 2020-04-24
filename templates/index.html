@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+   <head>
+      <title>VSL Sensor data </title>
+      <link rel="stylesheet" href='../static/style.css'/>
+      <meta http-equiv="refresh" content="120">
+   </head>
+   <body>
+	<h1>VSL Sensor Data </h1>
+	<h3> Temperature   =  {{ temp  }} &degC &emsp; Relative Humidity = {{ hum}} % &nbsp {{ time }} (UTC) ==> <a href="/"class="button">Refresh</a> </h3>
+        <p>
+        <form method="POST">
+            Start date
+                <input type ="date" name="start_date" value={{start_date}}>
+            &nbsp Finish date
+                <input type ="date" name="finish_date" value={{finish_date}}>
+                <input type="submit">
+                </form></p>
+        <hr>
+        <img src="/plot/temp" alt="Image Placehoder" width ="100%">
+        <a href="/download.csv" download = "PlotData.csv">Download plot data</a>
+	<p> &copy 2019 KJ</p>
+   </body>
+</html>
